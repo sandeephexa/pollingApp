@@ -21,7 +21,8 @@ app.use(bodyParser.urlencoded({extended : false}));
 app.use(cors());
 
 app.use('/poll',poll);
-const port = 3000;
+//const port = 3000;
+app.set('port', process.env.PORT || 3000);
 
 // start server
 app.listen(port, ()=> console.log(`server running at ${port}`));
