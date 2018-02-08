@@ -22,10 +22,12 @@ app.use(cors());
 
 app.use('/poll',poll);
 //const port = 3000;
-app.set('port', process.env.PORT || 3000);
+app.listen(process.env.port || process.env.PORT || 3000, function () {
+    console.log("listening");
+});
 
 // start server
-app.listen(port, ()=> console.log(`server running at ${port}`));
+
 
 
 
