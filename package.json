@@ -4,8 +4,8 @@
   "description": "polling app",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node app.js"
+   
   },
   "author": "sandeep kumar",
   "license": "ISC",
