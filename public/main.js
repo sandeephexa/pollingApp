@@ -5,7 +5,7 @@ form.addEventListener('submit', e =>
 {
     const choice = document.querySelector('input[name=os]:checked').value;
     const data = {os:choice};
-    fetch('http://localhost:3000/poll',{
+    fetch('https://localhost:3000/poll',{
         method : 'post',
         body : JSON.stringify(data),
         headers : new Headers({'Content-Type' : 'application/json'})
@@ -19,7 +19,7 @@ form.addEventListener('submit', e =>
 })
 
 // get votes from MongoDB
-fetch('http://localhost:3000/poll')
+fetch('https://localhost:3000/poll')
 .then(res => res.json())
 .then(data => {
     votes = data.votes;
